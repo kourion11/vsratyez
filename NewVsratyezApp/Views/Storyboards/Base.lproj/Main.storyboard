@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mqa-oq-yjh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,13 +12,12 @@
         <!--Tab Bar Controller-->
         <scene sceneID="QmN-7k-nSR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e68-yj-ijw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="mqa-oq-yjh" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="61g-RD-Xjh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="labelColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="bwN-x0-9tG" kind="relationship" relationship="viewControllers" id="4Rp-N7-gFN"/>
@@ -27,6 +27,7 @@
                         <segue destination="KZr-y8-tGk" kind="relationship" relationship="viewControllers" id="Rfe-Yk-0Yb"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e68-yj-ijw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-404" y="-102"/>
         </scene>
@@ -84,7 +85,7 @@
         <scene sceneID="4SG-gT-ouB">
             <objects>
                 <navigationController id="qAy-cM-ppC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="bell" catalog="system" id="dNT-BF-Bln"/>
+                    <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" id="dNT-BF-Bln"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ARj-j8-BYD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -118,7 +119,7 @@
         <scene sceneID="GBv-LQ-YLo">
             <objects>
                 <navigationController id="WqV-Hw-5f6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="globe" catalog="system" id="J6o-fB-IRo"/>
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="J6o-fB-IRo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KuX-XY-Rrm">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -197,11 +198,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bell" catalog="system" width="128" height="124"/>
-        <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

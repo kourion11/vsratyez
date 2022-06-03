@@ -88,7 +88,26 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        addTargetButtons()
+        fieldsDelegate()
+        setupViews()
+        view.backgroundColor = .systemBackground
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        assignFrames()
+        configureHeaderView()
+    }
+    
+    private func fieldsDelegate() {
+        usernameEmailField.delegate = self
+        passwordField.delegate = self
+    }
+    
+    private func addTargetButtons() {
         loginButton.addTarget(
             self,
             action: #selector(didTapLoginButton),
@@ -112,18 +131,9 @@ class LoginViewController: UIViewController {
             action: #selector(didTapCreateAccount),
             for: .touchUpInside
         )
-        
-        usernameEmailField.delegate = self
-        passwordField.delegate = self
-        
-        setupViews()
-        view.backgroundColor = .systemBackground
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        // assign frames
+    private func assignFrames() {
         headerView.frame = CGRect(
             x: 0,
             y: 0.0,
@@ -172,8 +182,6 @@ class LoginViewController: UIViewController {
             width: view.width - 20,
             height: 50
         )
-        
-        configureHeaderView()
     }
     
     private func configureHeaderView() {
@@ -185,10 +193,12 @@ class LoginViewController: UIViewController {
         let imageView = UIImageView(image: UIImage(named: "text"))
         headerView.addSubview(imageView)
         imageView.contentMode = .scaleAspectFit
-        imageView.frame = CGRect(x: headerView.width/4.0,
-                                 y: view.safeAreaInsets.top,
-                                 width: headerView.width/2.0,
-                                 height: headerView.height - view.safeAreaInsets.top)
+        imageView.frame = CGRect(
+            x: headerView.width/4.0,
+            y: view.safeAreaInsets.top,
+            width: headerView.width/2.0,
+            height: headerView.height - view.safeAreaInsets.top
+        )
     }
     
     private func setupViews() {
