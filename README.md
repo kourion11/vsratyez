@@ -18,7 +18,7 @@ Social network with weird animals
  <a href="https://ibb.co/W2dVDbP"><img src="https://i.ibb.co/W2dVDbP/home.jpg" alt="home" border="0"></a>
 - Log Out
 
-<a href="https://ibb.co/Y0wz5Nn"><img src="https://i.ibb.co/Y0wz5Nn/settings.jpg" alt="settings" border="0"></a>
+<a href="https://ibb.co/xqnTdP2"><img src="https://i.ibb.co/xqnTdP2/settings-log-out.jpg" alt="settings-log-out" border="0"></a>
 
 ## Will be implemented later
 - SearchBar
