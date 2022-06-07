@@ -5,6 +5,8 @@ Social network with weird animals
 
 ## Features
 - Firebase
+- UIKit
+- SafariServices
 
 ## Implemented
 - Create new account
