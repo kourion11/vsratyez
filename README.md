@@ -15,9 +15,6 @@ Social network with weird animals
 - Authorization
 
 <a href="https://ibb.co/Bnt2ZXj"><img src="https://i.ibb.co/Bnt2ZXj/auth.jpg" alt="auth" border="0" /></a>
-- Home screen
-
- <a href="https://ibb.co/W2dVDbP"><img src="https://i.ibb.co/W2dVDbP/home.jpg" alt="home" border="0"></a>
 - Log Out
 
 <a href="https://ibb.co/xqnTdP2"><img src="https://i.ibb.co/xqnTdP2/settings-log-out.jpg" alt="settings-log-out" border="0"></a>
