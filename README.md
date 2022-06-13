@@ -11,13 +11,15 @@ Social network with weird animals
 ## Implemented
 - Create new account
 
-<a href="https://ibb.co/MCCGCT5"><img src="https://i.ibb.co/MCCGCT5/create-acc.jpg" alt="create-acc" border="0"></a>
+![createAcc](https://user-images.githubusercontent.com/77104848/173336375-fac9dd68-e5c1-4d54-a068-7c340bf60f7d.jpg)
+
 - Authorization
 
-<a href="https://ibb.co/Bnt2ZXj"><img src="https://i.ibb.co/Bnt2ZXj/auth.jpg" alt="auth" border="0" /></a>
+![auth](https://user-images.githubusercontent.com/77104848/173336421-1fadb9cf-3034-4491-a1c9-0181b9d7c04e.jpg)
+
 - Log Out
 
-<a href="https://ibb.co/xqnTdP2"><img src="https://i.ibb.co/xqnTdP2/settings-log-out.jpg" alt="settings-log-out" border="0"></a>
+![settingsLogOut](https://user-images.githubusercontent.com/77104848/173336454-d67380aa-b64b-4db2-af99-83a8248d8b1d.jpg)
 
 ## Will be implemented later
 - SearchBar
