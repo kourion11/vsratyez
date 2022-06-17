@@ -31,7 +31,7 @@ public class DatabaseManager {
         let key = email.safeDatabaseKey()
         database.child(key).setValue(["username": username]) { error, _ in
             if error == nil {
-               // succeded
+                // succeded
                 completion(true)
                 return
             } else {

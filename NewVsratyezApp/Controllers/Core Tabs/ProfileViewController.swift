@@ -38,8 +38,7 @@ final class ProfileViewController: UIViewController {
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.itemSize = CGSize(width: view.width/3, height: view.width/3)
-        collectionView = UICollectionView(frame: .zero,
-                                         collectionViewLayout: layout)
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView?.delegate = self
         collectionView?.dataSource = self
         guard let collectionView = collectionView else { return }

@@ -10,10 +10,8 @@ import UIKit
 class NotificationsViewController: UIViewController {
     
     private let tableView: UITableView = {
-        let tableView = UITableView(frame: .zero,
-                                    style: .grouped)
-        tableView.register(UITableViewCell.self,
-                           forCellReuseIdentifier: "cell")
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return tableView
     }()
 
@@ -60,5 +58,4 @@ extension NotificationsViewController: UITableViewDataSource, UITableViewDelegat
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        <#code#>
 //    }
-    
 }

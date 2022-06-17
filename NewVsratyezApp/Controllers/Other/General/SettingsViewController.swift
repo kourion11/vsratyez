@@ -5,6 +5,7 @@
 //  Created by Сергей Юдин on 25.05.2022.
 //
 
+import SafariServices
 import UIKit
 
 struct SettingCellModel {
@@ -16,14 +17,8 @@ struct SettingCellModel {
 final class SettingsViewController: UIViewController {
     
     private let tableView: UITableView = {
-        let tableView = UITableView(
-            frame: .zero,
-            style: .grouped
-        )
-        tableView.register(
-            UITableViewCell.self,
-            forCellReuseIdentifier: "cell"
-        )
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return tableView
     }()
     
@@ -31,6 +26,7 @@ final class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupViews()
         configureModels()
         configureTableView()
@@ -38,16 +34,78 @@ final class SettingsViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
         tableView.frame = view.bounds
     }
     
     private func configureModels() {
-        let section = [
+        data.append([
+            SettingCellModel(title: "Edit Profile") { [weak self] in
+                self?.didTapEditProfile()
+            },
+            SettingCellModel(title: "Invite Friends") { [weak self] in
+                self?.didTapInviteFriends()
+            },
+            SettingCellModel(title: "Safe Original Posts") { [weak self] in
+                self?.didTapSaveOriginalPosts()
+            }
+        ])
+        
+        data.append([
+            SettingCellModel(title: "Instagram") { [weak self] in
+                self?.openURL(type: .instagram)
+            },
+            SettingCellModel(title: "Telegram") { [weak self] in
+                self?.openURL(type: .telegram)
+            },
+            SettingCellModel(title: "Help / Feedback") { [weak self] in
+                self?.openURL(type: .help)
+            }
+        ])
+        
+        data.append([
             SettingCellModel(title: "Log Out") { [weak self] in
                 self?.didTapLogOut()
             }
-        ]
-        data.append(section)
+        ])
+    }
+    
+    enum SettingsURLType {
+        case instagram, telegram, help
+    }
+    
+    private func openURL(type: SettingsURLType) {
+        let urlString: String
+        switch type {
+        case .instagram:
+            urlString = "https://instagram.com/vsratyez"
+        case .telegram:
+            urlString = "https://t.me/zhmihnytie"
+        case .help:
+            urlString = "https://t.me/kourion"
+        }
+        
+        guard let url = URL(string: urlString) else { return }
+        
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true)
+        
+    }
+    
+    private func didTapEditProfile() {
+        let vc = EditProfileViewController()
+        vc.title = "Edit Profile"
+        let navVC = UINavigationController(rootViewController: vc)
+        navVC.modalPresentationStyle = .fullScreen
+        present(navVC, animated: true)
+    }
+    
+    private func didTapInviteFriends() {
+        // Show share sheet to invite friends
+    }
+    
+    private func didTapSaveOriginalPosts() {
+        
     }
     
     private func didTapLogOut() {
@@ -112,6 +170,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = data[indexPath.section][indexPath.row].title
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     

@@ -12,7 +12,7 @@ extension UIView {
     public var width: CGFloat {
         return frame.size.width
     }
-    
+
     public var height: CGFloat {
         return frame.size.height
     }
@@ -32,8 +32,6 @@ extension UIView {
     public var right: CGFloat {
         return frame.origin.x + frame.width
     }
-    
-    
 }
 
 extension String {

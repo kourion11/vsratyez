@@ -108,7 +108,6 @@ class RegistrationViewController: UIViewController {
             width: view.width - 40,
             height: 52
         )
-        
     }
     
     func setupViews() {
@@ -157,7 +156,6 @@ extension RegistrationViewController: UITextFieldDelegate {
         } else {
             didTapRegister()
         }
-        
         return true
     }
 }
